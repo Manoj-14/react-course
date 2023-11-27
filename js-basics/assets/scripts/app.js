@@ -9,7 +9,8 @@
 // console.log(util.default);
 // console.log(util.key);
 
-// const hobbies = ["Sports", "Reading", "Singing", "Playing"];
+const hobbies = ["Sports", "Reading", "Singing", "Playing"];
+const hobbies2 = ["Sports1", "Reading1", "Singing1", "Playing1"];
 
 // hobbies.push("Stoty telling");
 // hobbies.unshift("Sports");
@@ -25,12 +26,16 @@
 // }));
 // console.log(edidtedHobbiesWithObjects);
 
-const [firstname, lastname] = ["Manoj", "M"];
-console.log(firstname);
-console.log(lastname);
+// const [firstname, lastname] = ["Manoj", "M"];
+// console.log(firstname);
+// console.log(lastname);
 
-const { name, age } = { name: "Manoj", age: 21 };
-console.log(name, age);
+// const { name, age } = { name: "Manoj", age: 21 };
+// console.log(name, age);
 
-const { name: var_name, age1 } = { name: "Manoj", age: 21 };
-console.log(var_name, age1);
+// const { name: var_name, age1 } = { name: "Manoj", age: 21 };
+// console.log(var_name, age1);
+
+const newHobbies = [...hobbies, ...hobbies2];
+
+console.log(newHobbies);
