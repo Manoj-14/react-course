@@ -9,8 +9,8 @@
 // console.log(util.default);
 // console.log(util.key);
 
-const hobbies = ["Sports", "Reading", "Singing", "Playing"];
-const hobbies2 = ["Sports1", "Reading1", "Singing1", "Playing1"];
+// const hobbies = ["Sports", "Reading", "Singing", "Playing"];
+// const hobbies2 = ["Sports1", "Reading1", "Singing1", "Playing1"];
 
 // hobbies.push("Stoty telling");
 // hobbies.unshift("Sports");
@@ -36,6 +36,26 @@ const hobbies2 = ["Sports1", "Reading1", "Singing1", "Playing1"];
 // const { name: var_name, age1 } = { name: "Manoj", age: 21 };
 // console.log(var_name, age1);
 
-const newHobbies = [...hobbies, ...hobbies2];
+// const newHobbies = [...hobbies, ...hobbies2];
 
-console.log(newHobbies);
+// console.log(newHobbies);
+
+const handleTimeOut = () => {
+  console.log("Time out");
+};
+
+const handleTimeOut1 = () => {
+  console.log("Time out 1");
+};
+
+setTimeout(handleTimeOut, 2000);
+setTimeout(handleTimeOut1, 3000);
+setTimeout(() => {
+  console.log("Time out last");
+}, 4000);
+
+function greeter(greet) {
+  greet();
+}
+
+greeter(() => console.log("Calling funtion"));
