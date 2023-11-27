@@ -40,22 +40,35 @@
 
 // console.log(newHobbies);
 
-const handleTimeOut = () => {
-  console.log("Time out");
-};
+// const handleTimeOut = () => {
+//   console.log("Time out");
+// };
 
-const handleTimeOut1 = () => {
-  console.log("Time out 1");
-};
+// const handleTimeOut1 = () => {
+//   console.log("Time out 1");
+// };
 
-setTimeout(handleTimeOut, 2000);
-setTimeout(handleTimeOut1, 3000);
-setTimeout(() => {
-  console.log("Time out last");
-}, 4000);
+// setTimeout(handleTimeOut, 2000);
+// setTimeout(handleTimeOut1, 3000);
+// setTimeout(() => {
+//   console.log("Time out last");
+// }, 4000);
 
-function greeter(greet) {
-  greet();
-}
+// function greeter(greet) {
+//   greet();
+// }
 
-greeter(() => console.log("Calling funtion"));
+// greeter(() => console.log("Calling funtion"));
+
+const name = "Manoj";
+var name1 = name;
+name1 = name1 + "!";
+console.log(name, name1); // original value is not change bcz var stors the original value insted of memory
+
+const hobbies = ["Sports", "Reading", "Singing", "Playing"];
+
+const hobbiesRef = hobbies;
+hobbiesRef.push("New Hobby"); // original value is will change bcz var stors the memory address insted of value
+
+console.log(hobbies);
+console.log(hobbiesRef);
