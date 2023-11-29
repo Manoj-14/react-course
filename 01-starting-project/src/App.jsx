@@ -2,7 +2,7 @@ import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/Coreconcept/CoreConcept.jsx";
 import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import TabButton from "./components/TabButton.jsx";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 function App() {
   const [selectedTopic, setselectedTopic] = useState();
@@ -26,7 +26,8 @@ function App() {
     );
   }
   return (
-    <div>
+    <>
+      {/* <Fragment> */}
       <Header />
       {/* or <Header></Header> */}
       <main>
@@ -68,7 +69,8 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </div>
+      {/* </Fragment> */}
+    </>
   );
 }
 
