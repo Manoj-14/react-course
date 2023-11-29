@@ -2,10 +2,14 @@ import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/Coreconcept/CoreConcept.jsx";
 import { CORE_CONCEPTS } from "./data";
 import TabButton from "./components/TabButton.jsx";
+import { useState } from "react";
 
 function App() {
+  const [selectedTopic, setselectedTopic] = useState("Please click the button");
+
   function handleSelect(selectedBtn) {
-    console.log(selectedBtn);
+    setselectedTopic(selectedBtn);
+    // console.log(selectedBtn);
   }
   return (
     <div>
