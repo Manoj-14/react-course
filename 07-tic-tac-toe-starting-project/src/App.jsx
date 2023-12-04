@@ -20,6 +20,10 @@ function defrriveActivePlayer(gameTurns) {
 }
 
 function App() {
+  const [player, setPlayers] = useState({
+    X: "Player 1",
+    O: "Player 2",
+  });
   const [gameTurns, setGameTurns] = useState([]);
   // const [hasWinner, setHasWinner] = useState(false);
   // const [activePlayer, setActiveplayer] = useState("X");
@@ -46,7 +50,7 @@ function App() {
       firstSquareRow === secondSquareRow &&
       secondSquareRow === thirdSquareRow
     ) {
-      winner = firstSquareRow;
+      winner = player[firstSquareRow];
     }
   }
 
@@ -66,12 +70,31 @@ function App() {
     setGameTurns([]);
   }
 
+  function handlePlayerNameChange(symbol, newName) {
+    setPlayers((prevplayers) => {
+      return {
+        ...prevplayers,
+        [symbol]: newName,
+      };
+    });
+  }
+
   return (
     <main>
       <div id="game-container">
         <ol id="players" className="highlight-player">
-          <Player name="Player 1" symbol="X" isActive={activePlayer === "X"} />
-          <Player name="Player 2" symbol="O" isActive={activePlayer === "O"} />
+          <Player
+            name="Player 1"
+            symbol="X"
+            isActive={activePlayer === "X"}
+            onChangeName={handlePlayerNameChange}
+          />
+          <Player
+            name="Player 2"
+            symbol="O"
+            isActive={activePlayer === "O"}
+            onChangeName={handlePlayerNameChange}
+          />
         </ol>
         {(winner || hasDraw) && (
           <GameOver winner={winner} isGamerestart={handleGameRestart} />
